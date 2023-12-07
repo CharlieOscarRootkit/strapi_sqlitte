@@ -67,6 +67,12 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "categories"
+    },
+    "web_hero_section": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::web-hero-section.web-hero-section",
+      "mappedBy": "category"
     }
   }
 }

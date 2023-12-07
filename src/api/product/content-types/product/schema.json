@@ -124,6 +124,12 @@
       },
       "type": "string",
       "required": true
+    },
+    "suppliers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::supplier.supplier",
+      "mappedBy": "products"
     }
   }
 }
