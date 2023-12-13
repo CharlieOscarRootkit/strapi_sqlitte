@@ -735,6 +735,14 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
       'oneToOne',
       'api::web-hero-section.web-hero-section'
     >;
+    type: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.DefaultTo<'top'>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
